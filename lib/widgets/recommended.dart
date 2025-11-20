@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class RecommendedItem extends StatelessWidget {
   final String img;
   final String title;
   final String artist;
   final String views;
+  final int index;
 
   const RecommendedItem({
     super.key,
@@ -12,6 +14,7 @@ class RecommendedItem extends StatelessWidget {
     required this.title,
     required this.artist,
     required this.views,
+    required this.index,
   });
 
   @override
@@ -35,24 +38,30 @@ class RecommendedItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title,
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600)),
-                const SizedBox(height: 5),
-                Text(
-                  artist,
-                  style: const TextStyle(color: Colors.white60, fontSize: 14),
-                ),
-                Text(
-                  "$views / steams",
-                  style: const TextStyle(color: Colors.white38, fontSize: 13),
-                ),
+                     style: const TextStyle(
+                       color: Colors.white,
+                       fontSize: 16,
+                       fontWeight: FontWeight.w600)),
+                       const SizedBox(height: 5),
+                       Text(
+                         artist,
+                         style:
+                         const TextStyle(color: Colors.white60, fontSize: 14),
+                       ),
+                       Text(
+                         "$views / steams",
+                         style:
+                         const TextStyle(color: Colors.white38, fontSize: 13),
+                       ),
               ],
             ),
           ),
         ],
       ),
-    );
+    )
+    .animate()
+    .animate(delay: (index * 250).ms)
+    .fadeIn(duration: 500.ms)
+    .scale(curve: Curves.elasticOut, duration: 800.ms);
   }
 }

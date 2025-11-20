@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class RecentlyItem extends StatelessWidget {
   final String img;
   final String title;
+  final int index;
 
   const RecentlyItem({
     super.key,
     required this.img,
     required this.title,
+    required this.index,
   });
 
   @override
@@ -35,6 +38,16 @@ class RecentlyItem extends StatelessWidget {
           )
         ],
       ),
+    )
+    .animate()
+    .animate(delay: (index * 250).ms)
+    .scale(
+      duration: 800.ms,
+      curve: Curves.elasticOut,
+    )
+    .fadeIn(
+      duration: 500.ms,
+      curve: Curves.easeOut,
     );
   }
 }

@@ -2,6 +2,9 @@
 
 **Soundify** is a simple music player application that displays song lists, music recommendations, and modern navigation. This application was developed to fulfill the UTS requirements for Mobile Programming 2, with focus on UI design, page navigation, and utilization of local assets including images and animations.
 
+## Application Report and Demo Video
+[![Click Here](https://img.shields.io/badge/Click_Here_to_View_Report_%26_Demo-brightgreen)](https://drive.google.com/drive/u/1/folders/1RU7YqY8Sy7O6xZtp2M6UxtZY2y2h4Sg-)
+
 ## 🚀 Tech Stack
 - **Flutter** - UI Framework
 - **Dart** - Programming Language
@@ -17,6 +20,7 @@
 - ✅ Detailed song pages
 - ✅ Clean and modular folder structure
 - ✅ Lightweight and responsive performance
+- ✅ Widget animations and smooth transitions
 
 ## 🔧 Installation & Running
 1. Clone this repository

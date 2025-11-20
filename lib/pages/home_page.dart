@@ -138,9 +138,9 @@ class _HomePageState extends State<HomePage> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [
-                  RecentlyItem(img: "assets/r1.jpeg", title: "Nirvana"),
-                  RecentlyItem(img: "assets/r2.jpg", title: "Gorillaz"),
-                  RecentlyItem(img: "assets/r3.png", title: "Joji"),
+                  RecentlyItem(img: "assets/r1.jpeg", title: "Nirvana", index: 0),
+                  RecentlyItem(img: "assets/r2.jpg", title: "Gorillaz", index: 1),
+                  RecentlyItem(img: "assets/r3.png", title: "Joji", index: 2),
                 ],
               ),
             ),
@@ -165,18 +165,21 @@ class _HomePageState extends State<HomePage> {
               title: "I Wanna Be Yours",
               artist: "Artic Monkey",
               views: "865k",
+              index: 0,
             ),
             const RecommendedItem(
               img: "assets/c2.png",
               title: "Last Night on Earth",
               artist: "Green Day",
               views: "1.5m",
+              index: 1,
             ),
             const RecommendedItem(
               img: "assets/c3.webp",
               title: "BIRDS OF FEATHER",
               artist: "Billie Eilish",
               views: "3.2m",
+              index: 2,
             ),
 
             const SizedBox(height: 40),
